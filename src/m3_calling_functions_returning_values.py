@@ -7,8 +7,8 @@ This module demonstrates and practices:
   -- UNIT TESTING.
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Tyler Nottingham.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import m3t_tester
 
@@ -37,7 +37,7 @@ def main():
 def run_test_sum_of_digits():
     """ Tests the  sum_of_digits   function. """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function, as follows:
+    # DONE: 2. Implement this TEST function, as follows:
     #
     #  Step 1:  This TEST function tests the  sum_of_digits  function.
     #    So read the doc-string of the  sum_of_digits  function
@@ -71,6 +71,25 @@ def run_test_sum_of_digits():
     # TO DO: 2 (continued).
     # Below this comment, add 3 more test cases of your own choosing.
     # ------------------------------------------------------------------
+
+    #Test 2:
+    expected2 = 10
+    answer2 = sum_of_digits(1234)
+    print('Test 2 expected', expected2)
+    print('     actual: ', answer2)
+
+    #Test 3:
+    expected3 = 26
+    answer3 = sum_of_digits(47546)
+    print('Test 3 expected', expected3)
+    print('     actual:', answer3)
+
+    #Test 4:
+    expected4 = 23
+    answer4 = sum_of_digits(11292017)
+    print('Test 4 expected', expected4)
+    print('     actual:', answer4)
+
 
 
 def sum_of_digits(number):
@@ -109,7 +128,7 @@ def sum_of_digits(number):
 def run_test_digits_in_cube():
     """ Tests the   digits_in_cube   function. """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement this function.
+    # DONE: 3. Implement this function.
     #   It TESTS the  digits_in_cube  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -133,6 +152,23 @@ def run_test_digits_in_cube():
     print('-----------------------------------------------------')
     print('Testing the   digits_in_cube   function:')
     print('-----------------------------------------------------')
+    #Test 1:
+    expected = 9
+    answer = digits_in_cube(3)
+    print('Expected:', expected)
+    print('Actual:', answer)
+
+    #Test 2:
+    expected2 = 10
+    answer2 = digits_in_cube(4)
+    print('Expected:', expected2)
+    print('Actual:', answer2)
+
+    #Test 3:
+    expected3 = 9
+    answer3 = digits_in_cube(6)
+    print('Expected:', expected3)
+    print('Actual:', answer3)
 
 
 def digits_in_cube(n):
@@ -145,7 +181,7 @@ def digits_in_cube(n):
       this function returns (1 + 2 + 5), which is 8.
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #   That is called TEST-DRIVEN DEVELOPMENT (TDD).
     #
@@ -154,7 +190,9 @@ def digits_in_cube(n):
     #    the    sum_of_digits    function that is DEFINED ABOVE.
     ####################################################################
     # ------------------------------------------------------------------
-
+    n = n ** 3
+    n = sum_of_digits(n)
+    return n
 
 def run_test_digits_in_power():
     """ Tests the   digits_in_power   function. """
