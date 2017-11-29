@@ -31,7 +31,7 @@ def main():
     #       ** Ask a TA or your professor for help in that case. **
     # ------------------------------------------------------------------
 
-    # m3t_tester.main()
+     #m3t_tester.main()
 
 
 def run_test_sum_of_digits():
@@ -252,7 +252,7 @@ def digits_in_power(n, k):
 def run_test_fancy_sums_of_digits():
     """ Tests the   fancy_sums_of_digits   function. """
     # ------------------------------------------------------------------
-    # TODO: 7. Implement this function.
+    # DONE: 7. Implement this function.
     #   It TESTS the  fancy_sums_of_digits  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -271,6 +271,23 @@ def run_test_fancy_sums_of_digits():
     # your 2nd and 3rd tests but READ THOSE TEST CASES CAREFULLY
     # in the doc-string to be sure that you understand the specification.
     # ------------------------------------------------------------------
+    #Test 1:
+    expected = 1
+    answer = fancy_sums_of_digits(10)
+    print("Expected:", 1)
+    print('Actual', answer)
+
+    #Test 2:
+    expected2 = 19084
+    answer2 = fancy_sums_of_digits(2)
+    print('Expected:', expected2)
+    print('Actual:', answer2)
+
+    #Test 3:
+    expected3 = 124309
+    answer3 = fancy_sums_of_digits(35)
+    print('Expected:', expected3)
+    print('Actual:', answer3)
 
 
 def fancy_sums_of_digits(n):
@@ -298,14 +315,17 @@ def fancy_sums_of_digits(n):
             -- so this function returns 124309.
     """
     # ------------------------------------------------------------------
-    # TODO: 8. Implement and test this function.
+    # DONE: 8. Implement and test this function.
     #
     ####################################################################
     # IMPORTANT: CALL, as many times as needed,
     #    the    sum_of_digits    function that is DEFINED ABOVE.
     ####################################################################
     # ------------------------------------------------------------------
-
+    X = sum_of_digits(n ** 1000)
+    Y = sum_of_digits(n ** 999)
+    Z = sum_of_digits(X ** Y)
+    return Z
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # This unusual form is necessary for the special testing we provided.
