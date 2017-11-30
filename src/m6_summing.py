@@ -29,19 +29,19 @@ def run_test_sum_cosines():
     print('Testing the   sum_cosines   function:')
     print('--------------------------------------------------')
     #Test 1:
-    expected = .1341629734
+    expected = -.5194806475
     answer = sum_cosines(4)
     print('Expected', expected)
     print('Actual:', answer)
 
     #Test 2:
-    expected2 = -.5194806475
+    expected2 = -.2358184620
     answer2 = sum_cosines(5)
     print('Expected:', expected2)
     print('Actual:', answer2)
 
     #Test 3:
-    expected3 = -.2358184620
+    expected3 = .7243518247
     answer3 = sum_cosines(6)
     print('Expected', expected3)
     print('Actual:', answer3)
@@ -66,7 +66,7 @@ def sum_cosines(n):
     #   test cases; that would defeat the purpose of TESTING!
     # ------------------------------------------------------------------
     total = 0
-    for k in range(n):
+    for k in range(n + 1):
         total = total + math.cos(k)
 
     return total
